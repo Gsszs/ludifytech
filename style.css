@@ -9,18 +9,38 @@ html {
 }
 
 header {
-    height: 9%;
-    width: 100vw;
+    height: 90px;
+    width: 100%;
     position: fixed;
     border-radius: 0px 0px 25px 25px;
     background-color: #23283E;
 }
 
 .container_grid {
-    width: 80vw;
+    width: 100vw;
     max-width: 1400px;
 
     margin: 0 auto;
+}
+
+header div.container_grid {
+    height: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container_grid img {
+    height: 90%;
+    /* width: 100px; */
+}
+
+.menu {
+    width: 700px;
+
+    display: flex;
+    justify-content: space-between;
 }
 
 body {
