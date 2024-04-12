@@ -1,7 +1,16 @@
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url(fonts/Josefin_Sans/static/JosefinSans-Bold.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+:root {
+    --azul_ludify: #203072;
 }
 
 html {
@@ -31,9 +40,8 @@ header div.container_grid {
     align-items: center;
 }
 
-.container_grid img {
-    height: 90%;
-    /* width: 100px; */
+header div.container_grid img {
+    height: 80%;
 }
 
 .menu {
@@ -43,6 +51,26 @@ header div.container_grid {
     justify-content: space-between;
 }
 
+.menu a{
+    font-size: 27px;
+    font-family: 'Josefin Sans';
+
+    text-decoration: underline transparent;
+    text-decoration-thickness: 2px;
+    transition: text-decoration 300ms ease;
+
+    color: #fff;
+}
+
+.menu a:hover {
+    text-decoration-color: white;
+}
+
 body {
-    background-color: gray;
+    height: 100vh;
+    width: 100vh;
+    
+    background: rgb(19,21,33);
+    background: linear-gradient(180deg, rgba(19,21,33,1) 72%, rgba(78,86,135,1) 100%);
+    background-attachment: fixed;
 }
