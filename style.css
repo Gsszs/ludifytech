@@ -17,31 +17,49 @@ html {
     scroll-behavior: smooth;
 }
 
-header {
-    height: 90px;
-    width: 100%;
-    position: fixed;
-    border-radius: 0px 0px 25px 25px;
-    background-color: #23283E;
+body {
+    height: 100vh;
+    width: 100vh;
+    
+    background: rgb(19,21,33);
+    background: linear-gradient(180deg, rgba(19,21,33,1) 72%, rgba(78,86,135,1) 100%);
+    background-attachment: fixed;
 }
 
 .container_grid {
-    width: 100vw;
+    width: 80vw;
     max-width: 1400px;
 
-    margin: 0 auto;
+    margin-left: 75px;
+    margin-right: 75px;
+}
+
+header {
+    height: 110px;
+    width: 100vw;
+
+    border-radius: 0px 0px 30px 30px;
+
+    background-color: #23283E;
 }
 
 header div.container_grid {
     height: 100%;
+    width: 65%;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-header div.container_grid img {
-    height: 80%;
+#ConteudoHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#Logo {
+    width: 200px;
 }
 
 .menu {
@@ -66,11 +84,3 @@ header div.container_grid img {
     text-decoration-color: white;
 }
 
-body {
-    height: 100vh;
-    width: 100vh;
-    
-    background: rgb(19,21,33);
-    background: linear-gradient(180deg, rgba(19,21,33,1) 72%, rgba(78,86,135,1) 100%);
-    background-attachment: fixed;
-}
