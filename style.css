@@ -84,3 +84,15 @@ header div.container_grid {
     text-decoration-color: white;
 }
 
+#Background_1 {
+    width: 10%;
+    height: 10%;
+}
+
+.info .card {
+    width: 60%;
+    height: 100%;
+
+    background-color: #fff;
+    border-radius: 15px;
+}
