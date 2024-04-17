@@ -89,10 +89,35 @@ header div.container_grid {
     height: 10%;
 }
 
-.info .card {
-    width: 60%;
-    height: 100%;
+#info {
+    text-align: center;
 
-    background-color: #fff;
-    border-radius: 15px;
+    margin-bottom: 100px;
+    padding-bottom: 100px;
+}
+
+.container_cards {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    height: 550px;
+    width: 350px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--azul_ludify);
+
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+
+    border-radius: 4px;
+
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
