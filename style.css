@@ -3,6 +3,11 @@
     src: url(fonts/Josefin_Sans/static/JosefinSans-Bold.ttf);
 }
 
+@font-face {
+    font-family: 'ADLaM_Display';
+    src: url(fonts/ADLaM_Display/ADLaMDisplay-Regular.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -27,46 +32,51 @@ body {
 }
 
 .container_grid {
-    width: 80vw;
+    width: 90vw;
     max-width: 1400px;
 
-    margin-left: 75px;
-    margin-right: 75px;
+    margin: 0 auto;
+}
+
+.banner {
+    height: 100%;
+    width: 100vw;
+
+    background-image: url(img/Background.png);
+    background-repeat: no-repeat;
+
+    background-position: 50% 100%;
+    background-size: 95%;
 }
 
 header {
-    height: 110px;
-    width: 100vw;
-
-    border-radius: 0px 0px 30px 30px;
+    height: 90px;
 
     background-color: #23283E;
 }
 
 header div.container_grid {
     height: 100%;
-    width: 65%;
 
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
-#ConteudoHeader {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-#Logo {
-    width: 200px;
+header nav {
+    margin: 0 auto;
 }
 
 .menu {
-    width: 700px;
+    width: 1000px;
 
     display: flex;
     justify-content: space-between;
+    align-self: center;
+}
+
+
+#Logo {
+    width: 170px;
 }
 
 .menu a{
@@ -84,40 +94,49 @@ header div.container_grid {
     text-decoration-color: white;
 }
 
-#Background_1 {
-    width: 10%;
-    height: 10%;
-}
-
-#info {
-    text-align: center;
-
-    margin-bottom: 100px;
-    padding-bottom: 100px;
-}
-
-.container_cards {
+.conteudo_banner {
     width: 100%;
 
+    margin-top: 40px;
+
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .card {
-    height: 550px;
-    width: 350px;
-
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
 
     background-color: var(--azul_ludify);
+    opacity: 0.8;
 
-    padding-bottom: 20px;
+    padding: 20px;
     margin-bottom: 20px;
 
-    border-radius: 4px;
+    border-radius: 20px;
+}
 
-    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+h2 {
+    font-family: 'Josefin Sans';
+    font-size: 27px
+}
+
+p {
+    font-family: 'ADLaM_Display';
+}
+
+.card h2 {
+    margin-bottom: 30px;
+}
+
+.card:first-child {
+    margin-top: 20px;
+    height: 600px;
+    width: 550px;
+}
+
+.card:last-child {
+    height: 700px;
+    width: 680px;
 }
