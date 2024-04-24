@@ -16,6 +16,9 @@
 
 :root {
     --azul_ludify: #203072;
+    --cinza_ludify: #7D7D7D;
+    --branco_neutro: #D9D9D9;
+    --footer_header: #3B4468;
 }
 
 html {
@@ -51,7 +54,7 @@ body {
 header {
     height: 90px;
 
-    background-color: #23283E;
+    background-color: var(--footer_header);
 }
 
 header div.container_grid {
@@ -75,7 +78,7 @@ header nav {
     align-self: center;
 }
 
-#Logo {
+header svg {
     width: 170px;
 }
 
@@ -94,7 +97,7 @@ header nav {
     text-decoration-color: white;
 }
 
-.conteudo_banner {
+.conteudo_banner {  
     width: 100%;
     height: calc(100vh - 280px);
 
@@ -227,11 +230,17 @@ p {
     margin: 10px;
 }
 
+.cases_cards .case h2 {
+    margin-bottom: 0px
+}
+
 .cases_cards .case {
     width: calc(33.33% - 10px);
 
+    transform: scale(0.95);
+    transition: transform 300ms ease;
+
     margin: 30px;
-    margin-right: 0;
 
     padding: 0 10px;
     
@@ -243,11 +252,12 @@ p {
     text-align: center;
 }
 
-.cases_cards .case h2 {
-    margin-bottom: 0px
+.cases_cards .case:hover {
+    transform: scale(1.05);
 }
 
 #cases img {
+    margin-top: 20px;
     width: 220px;
 }
 
@@ -306,6 +316,8 @@ p {
     text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
 
     color: white;
+
+    cursor: pointer;
 }
 
 
@@ -314,77 +326,180 @@ p {
 }
 
 #contato {
-    height: 100%;
-    width: 100%;
+    text-align: center;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    margin-bottom: 120px;
+    padding-bottom: 100px;
+    margin-bottom: 100px;
 }
 
-.banner_contate-nos {
-    height: 100%;
-    width: 100%;
-    
+#contato form h2 {
+    margin-top: 50px;
+    margin-bottom: 70px;
+    font-size: 55px;
+    font-weight: 800;
+}
+
+#contato form {
+    width: 40%;
+
+    margin: 0 auto;
+    padding: 10px 0px;
+
+    border-radius: 40px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     background-image: url(img/Fundo_contate-nos.png);
     background-repeat: no-repeat;
-    background-size: contain;
-
-
-    background-position: 50% 50%;
-
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-
-    padding: 30px;
+    background-size: cover;
 }
 
-.banner_contate-nos h2 {
+#contato form label {
+    margin-bottom: 10px;
+    font-size: 17px;
+
+    font-family: 'ADLaM_Display';
+    color: var(--branco_neutro);
+
+    cursor: pointer;
+}
+
+
+.campo {
+    width: 60%;
+    margin-bottom: 50px;
+
+    text-align: left;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.campo input {
+    height: 40px;
+
+    color: var(--branco_neutro);
+    background-color: #404C93;
+
+    border: none;
+    border-radius: 8px;
+
+    outline: none;
+
+    text-indent: 10px;
+
+    font-size: 18px;
+    font-family: "ADLaM_Display";
+}
+
+.campo-textarea {
+    width: 60%;
     margin-bottom: 30px;
-}
 
-form {
-    height: 100%;
+    text-align: left;
 
     display: flex;
-    align-items: center;
     flex-direction: column;
-    /* justify-content: space-around; */
+    justify-content: space-between;
 }
 
-form .campo {
-    height: 100%;
+.campo-textarea textarea {
+    color: var(--branco_neutro);
+    background-color: #404C93;
 
-    text-align: center;
+    border: none;
+    border-radius: 8px;
 
-    margin-bottom: 100px;
-    padding-bottom: 100px;
+    outline: none;
+
+    padding: 10px;
+
+    font-size: 18px;
+    font-family: "ADLaM_Display";
+
+    resize: none;
 }
 
-form .campo-textarea {
-    height: 100%;
+.campo input:focus,
+.campo-textarea textarea:focus {
+    outline: 2px solid var(--branco_neutro);
+}
 
-    text-align: center;
-
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+#contato form input::placeholder,
+#contato form textarea::placeholder {
+    color: var(--cinza_ludify);
 }
 
 form button {
-    height: 40px;
-    width: 90px;
+    height: 45px;
+    width: 120px;
 
-    margin-top: 50px;
+    margin-top: 30px;
+    margin-bottom: 50px;
 
-    color: #fff;
-    background-color: #000;
+    color: #0F0F11;
+    background-color: var(--branco_neutro);
+    transition: background-color 200ms ease;
     border: none;
     border-radius: 20px;
 
     text-align: center;
+    font-family: "ADLaM_Display";
+    font-size: 20px;
+    font-weight: 500;
+
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #adadad;
+}
+
+footer {
+    height: 400px;
+
+    padding-top: 30px;
+    padding-bottom: 20px;
+
+    background-color: var(--footer_header);
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer #Logo {
+    height: 100%;
+    width: 100%;
+
+    margin-bottom: 40px;
+}
+
+footer h2 {
+    margin-bottom: 10px;
+}
+
+.redes_sociais {
+   width: 350px;
+
+   display: flex;
+   justify-content: space-between;
+}
+
+.redes_sociais svg{
+    width: 80px;
+
+    color: #000;
+}
+
+.redes_sociais a{
+    color: #fff;""
+    fill: #fff
+}
+
+.redes_sociais a:hover{
+    color: #f06638
 }
