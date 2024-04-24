@@ -326,6 +326,7 @@ p {
 }
 
 #contato {
+    width: 100%;
     text-align: center;
 
     padding-bottom: 100px;
@@ -340,7 +341,7 @@ p {
 }
 
 #contato form {
-    width: 40%;
+    width: 50%;
 
     margin: 0 auto;
     padding: 10px 0px;
@@ -491,15 +492,21 @@ footer h2 {
 
 .redes_sociais svg{
     width: 80px;
-
-    color: #000;
 }
 
 .redes_sociais a{
-    color: #fff;
-    fill: #fff
+    color: #0F0F11;
+    transition: color 200ms ease;
 }
 
-.redes_sociais a:hover{
-    color: #f06638
+.redes_sociais a:nth-child(1):hover{
+    color: #bd2d75;
+}
+
+.redes_sociais a:nth-child(2):hover{
+    color: #fff;
+}
+
+.redes_sociais a:nth-child(3):hover{
+    color: #007fd4;
 }
