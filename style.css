@@ -144,7 +144,7 @@ p {
     margin-bottom: 20px;
 }
 
-.card:first-child {
+.container_grid .card:first-child {
     margin-top: 20px;
     height: 630px;
     width: 530px;
@@ -152,7 +152,7 @@ p {
     flex-direction: column;
 }
 
-.card:last-child {
+.container_grid .card:last-child {
     height: 700px;
     width: 690px;
 }
@@ -509,4 +509,37 @@ footer h2 {
 
 .redes_sociais a:nth-child(3):hover{
     color: #007fd4;
+}
+
+@media screen and (max-width: 1300px) {
+    #contato form {
+        width: 70%;
+
+        padding: 0px 0px;
+
+        border-radius: 40px;
+    }
+}
+
+@media screen and (max-width: 1265px) {
+    .conteudo_banner .card h2 {
+        font-size: 25px;
+        margin-bottom: 8px;
+    }
+
+    .conteudo_banner .card:first-child {
+        width: 450px;
+    }
+
+    .conteudo_banner .card p:first-child {
+        font-size: 18px;
+    }
+
+    .conteudo_banner .card:last-child {
+        width: 600px;
+    }
+
+    .conteudo_banner .card p:last-child {
+        font-size: 17px;
+    }
 }
