@@ -35,7 +35,7 @@ body {
 }
 
 .container_grid {
-    width: 90vw;
+    width: 90%;
     max-width: 1400px;
 
     margin: 0 auto;
@@ -55,6 +55,10 @@ header {
     height: 90px;
 
     background-color: var(--footer_header);
+}
+
+header button {
+    display: none;
 }
 
 header div.container_grid {
@@ -97,7 +101,7 @@ header svg {
     text-decoration-color: white;
 }
 
-.conteudo_banner {  
+.conteudo_banner {
     width: 100%;
     height: calc(100vh - 280px);
 
@@ -142,6 +146,7 @@ p {
 
 .card h2 {
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .container_grid .card:first-child {
@@ -167,7 +172,8 @@ p {
     flex-direction: row;
 }
 
-.felipe_tadeu, .thiago_nascimento {
+.felipe_tadeu,
+.thiago_nascimento {
     max-width: 270px;
 
     display: flex;
@@ -209,7 +215,7 @@ p {
 
     background-image: url(img/Back_cases.png);
     background-repeat: no-repeat;
-    background-size: 40%; 
+    background-size: 40%;
     background-position: center;
 }
 
@@ -243,7 +249,7 @@ p {
     margin: 30px;
 
     padding: 0 10px;
-    
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -484,30 +490,30 @@ footer h2 {
 }
 
 .redes_sociais {
-   width: 350px;
+    width: 350px;
 
-   display: flex;
-   justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 
-.redes_sociais svg{
+.redes_sociais svg {
     width: 80px;
 }
 
-.redes_sociais a{
+.redes_sociais a {
     color: #0F0F11;
     transition: color 200ms ease;
 }
 
-.redes_sociais a:nth-child(1):hover{
+.redes_sociais a:nth-child(1):hover {
     color: #bd2d75;
 }
 
-.redes_sociais a:nth-child(2):hover{
+.redes_sociais a:nth-child(2):hover {
     color: #fff;
 }
 
-.redes_sociais a:nth-child(3):hover{
+.redes_sociais a:nth-child(3):hover {
     color: #007fd4;
 }
 
@@ -531,7 +537,7 @@ footer h2 {
         width: 450px;
     }
 
-    .conteudo_banner .card p:first-child {
+    .conteudo_banner .card:first-child p {
         font-size: 18px;
     }
 
@@ -539,12 +545,166 @@ footer h2 {
         width: 600px;
     }
 
-    .conteudo_banner .card p:last-child {
+    .conteudo_banner .card:last-child p {
         font-size: 17px;
     }
 }
 
-@media screen and (max-width: 1155px){
-    
-    
+@media screen and (max-width: 1150px) {
+    header {
+        display: flex;
+        width: 100%;
+    }
+
+    header div.container_grid {
+        width: 50%;
+
+        margin-left: 55px;
+
+        justify-content: space-between;
+    }
+
+    header button {
+        display: unset;
+
+        background: none;
+        border: none;
+
+        cursor: pointer;
+    }
+
+    header button svg {
+        height: 60px;
+        width: 60px;
+        fill: #fff
+    }
+
+    nav.menu {
+        display: none;
+    }
+
+    .cases_cards .case {
+        cursor: pointer;
+        transform: scale(1.05);
+    }
+
+    .cases_cards .case:hover {
+        transform: scale(1.05);
+    }
+
+    #cases .banner_cases {
+        background-image: none;
+    }
+
+    #cases .card {
+        background-color: transparent;
+        filter: none;
+        box-shadow: none;
+    }
+
+    .cases_cards .case p {
+        display: none;
+    }
+
+    .cases_cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cases_cards .case h2 {
+        width: 200px;
+
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .conteudo_banner .card:first-child {
+        height: 670px;
+        width: 400px;
+    }
+
+    .conteudo_banner .card:last-child {
+        height: 730px;
+        width: 590px;
+    }
+}
+
+@media screen and (max-width: 1030px) {
+    .conteudo_banner .card img {
+        width: 150px;
+    }
+
+    .card {
+        border-radius: 20px;
+        margin-bottom: 10px;
+    }
+
+    .conteudo_banner .card:first-child {
+        height: 100%;
+        width: 390px;
+    }
+
+    .conteudo_banner .card:last-child {
+        height: 100%;
+        width: 560px;
+    }
+
+    .conteudo_banner .card:first-child p,
+    .conteudo_banner .card:last-child p {
+        font-size: 16px
+    }
+
+    .conteudo_banner {
+        margin-top: 30px;
+        justify-content: space-evenly;
+    }
+
+    .felipe_tadeu, .thiago_nascimento {
+        margin: unset;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .banner{
+        height: 800px;
+
+        background-image: none;
+    }
+
+    #cases.container_grid {
+        width: 100%;
+    }
+
+    .conteudo_banner {
+        height: unset;
+        width: 100%;
+
+        overflow-x: scroll;
+
+        display: flex;
+
+        flex-wrap: nowrap;
+
+        flex-basis: unset;
+
+        gap: 40px;
+    }
+
+    .card {
+        flex-basis: 80%;
+    }
+
+    .conteudo_banner .card:first-child {
+        height: 630px;
+        width: 530px;
+
+        margin-top: unset;
+    }
+
+    .container_grid .card:last-child {
+        height: 700px;
+        width: 690px;
+    }
 }
