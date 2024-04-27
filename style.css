@@ -101,14 +101,20 @@ header svg {
     text-decoration-color: white;
 }
 
+#Introducao {
+    text-align: center;
+
+    margin-bottom: 100px;
+    padding-bottom: 100px;
+}
+
 .conteudo_banner {
     width: 100%;
-    height: calc(100vh - 280px);
 
     margin-top: 40px;
 
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .card {
@@ -144,12 +150,12 @@ p {
     text-align: center;
 }
 
-.card h2 {
+#Introducao h2 {
     margin-bottom: 20px;
     text-align: center;
 }
 
-.container_grid .card:first-child {
+#Introducao .card:first-child {
     margin-top: 20px;
     height: 630px;
     width: 530px;
@@ -157,7 +163,7 @@ p {
     flex-direction: column;
 }
 
-.container_grid .card:last-child {
+#Introducao .card:last-child {
     height: 700px;
     width: 690px;
 }
@@ -202,9 +208,7 @@ p {
 
     margin-top: 0 auto;
 
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+
 }
 
 #cases .banner_cases {
@@ -223,8 +227,11 @@ p {
     width: 100%;
     height: 1300px;
 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
     height: auto;
-    overflow: hidden;
 
     background-color: rgba(0, 0, 0, 0.7);
 }
@@ -517,6 +524,27 @@ footer h2 {
     color: #007fd4;
 }
 
+@media screen and (max-width: 1370px){
+    .conteudo_banner{
+        gap: 40px;
+    }
+
+    .conteudo_banner .card p {
+        font-size: 19px;
+    }
+
+    .conteudo_banner .descricao_criadores p {
+        font-size: 17px;
+    }
+
+}
+
+@media screen and (max-width: 1340px){
+    .conteudo_banner{
+        gap: 40px;
+    }
+}
+
 @media screen and (max-width: 1300px) {
     #contato form {
         width: 70%;
@@ -537,8 +565,8 @@ footer h2 {
         width: 450px;
     }
 
-    .conteudo_banner .card:first-child p {
-        font-size: 18px;
+    .conteudo_banner .card p {
+        font-size: 17px;
     }
 
     .conteudo_banner .card:last-child {
@@ -546,9 +574,64 @@ footer h2 {
     }
 
     .conteudo_banner .card:last-child p {
-        font-size: 17px;
+        font-size: 16px;
     }
 }
+
+@media screen and (max-width: 1190px) {
+
+    #Introducao {
+        width: 100%;
+        height: 830px;
+    }
+
+    .conteudo_banner {
+        width: 100%;
+
+        overflow-x: auto;
+
+        flex-basis: unset;
+    }
+
+    #Introducao .card {
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: unset;
+
+        box-shadow: unset;
+    }
+
+    #Introducao .card:first-child {
+        height: max-content;
+        width: 90%;
+
+        margin-left: 40px;
+
+        align-self: center;
+    }
+
+    #Introducao .card:last-child {
+        height: max-content;
+        width: 90%;
+
+        margin-right: 40px;
+
+        align-self: center;
+    }
+
+    #Introducao .card h2 {
+        font-size: 28px
+    }
+
+    #Introducao .card p {
+        font-size: 20px
+    }
+
+    .felipe_tadeu, .thiago_nascimento {
+        max-width: 400px;
+    }
+}
+
 
 @media screen and (max-width: 1150px) {
     header {
@@ -598,7 +681,7 @@ footer h2 {
 
     #cases .card {
         background-color: transparent;
-        filter: none;
+        backdrop-filter: unset;
         box-shadow: none;
     }
 
@@ -619,92 +702,282 @@ footer h2 {
     }
 }
 
-@media screen and (max-width: 1100px) {
-    .conteudo_banner .card:first-child {
-        height: 670px;
-        width: 400px;
+@media screen and (max-width: 900px) {
+    #contato form{
+        width: 90%;
     }
 
-    .conteudo_banner .card:last-child {
-        height: 730px;
-        width: 590px;
+    #portfolio {
+        height: 100%;
+        margin-top: 80px;
+        margin-bottom: 120px;
+    }
+
+    #portfolio .container_grid {
+        width: 100%;
+    }
+
+    .conteudo_portfolio{
+        width: 100%;
+
+        border-radius: 0px;
+        box-shadow: none;
     }
 }
 
-@media screen and (max-width: 1030px) {
-    .conteudo_banner .card img {
-        width: 150px;
+@media screen and (max-width: 755px) {
+    .conteudo_banner{
+        gap: 20px;
     }
 
-    .card {
-        border-radius: 20px;
-        margin-bottom: 10px;
-    }
-
-    .conteudo_banner .card:first-child {
-        height: 100%;
-        width: 390px;
-    }
-
-    .conteudo_banner .card:last-child {
-        height: 100%;
-        width: 560px;
-    }
-
-    .conteudo_banner .card:first-child p,
-    .conteudo_banner .card:last-child p {
-        font-size: 16px
-    }
-
-    .conteudo_banner {
-        margin-top: 30px;
-        justify-content: space-evenly;
-    }
-
-    .felipe_tadeu, .thiago_nascimento {
-        margin: unset;
-    }
-}
-
-@media screen and (max-width: 990px) {
-    .banner{
-        height: 800px;
-
+    .banner {
         background-image: none;
     }
 
-    #cases.container_grid {
-        width: 100%;
+    #Introducao .card {
+        border-radius: 20px;
     }
 
-    .conteudo_banner {
-        height: unset;
+    #Introducao .card p {
+        font-size: 17px;
+        padding: 0px;
+    }
+
+    header {
+        height: 100px;
+    }
+
+    header div.container_grid{
         width: 100%;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+}
 
-        overflow-x: scroll;
+@media screen and (max-width: 600px) {
+    .banner {
+        height: auto;
+    }
 
-        display: flex;
+    #Introducao {
+        height: auto;
 
-        flex-wrap: nowrap;
+        padding-top: 10px;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
 
-        flex-basis: unset;
+    #Introducao .card img {
+        width: 180px;
+    }
 
-        gap: 40px;
+    #Introducao .card h2 {
+        font-size: 22px;
+    }
+
+    #Introducao .card p {
+        font-size: 15px;
+    }
+
+    #Introducao .card:first-child {
+        margin-left: 20px;
+    }
+
+    #Introducao .card:last-child {
+        margin-right: 20px;
+    }
+
+    #contato form {
+        width: 100%;
+        border-radius: 0px;
+
+        background-position: 50% 0%;
+    }
+
+    #contato .campo {
+        width: 80%;
+        margin-bottom: 50px;
+    }
+
+    #contato .campo-textarea {
+        width: 80%;
+        margin-bottom: 50px;
+    }
+
+    #contato form button {
+        height: 75px;
+        width: 80%;
+
+        margin-top: 0px;
+
+        font-size: 30px;
+
+        border-radius: 10px;
+    }
+}
+
+@media screen and (max-width: 500px ) {
+    header button svg {
+        height: 50px;
+        width: 50px;
+    }
+
+    .conteudo_portfolio button {
+        width: 80%;
+        height: 100px;
+
+        font-size: 23px;
+
+        border-radius: 20px;
+
+        text-shadow: none;
+
+        box-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.3);
+    }
+
+    #Introducao .card img {
+        width: 130px;
+    }
+
+    #Introducao .card h2 {
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-size: 20px;
+    }
+
+    #Introducao .descricao_criadores h2 {
+        margin-bottom: 20px;
+    }
+    
+    #Introducao .card p {
+        font-size: 15px;
+    }
+
+    #Introducao .card:first-child {
+        width: 90%;
+
+        margin-left: 10px;
+    }
+
+    #Introducao .card:last-child {
+        width: 95%;
+
+        margin-right: 10px;
+    }
+
+    #contato {
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    header svg {
+        width: 145px;
+    }
+
+    header div.container_grid {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    #Introducao .card {
+        border-radius: 15px;
     }
 
     .card {
-        flex-basis: 80%;
+        padding: 0px;
+        margin-bottom: 10px;
     }
 
-    .conteudo_banner .card:first-child {
-        height: 630px;
-        width: 530px;
-
-        margin-top: unset;
+    #Introducao .card h2 {
+        font-size: 24px
     }
 
-    .container_grid .card:last-child {
-        height: 700px;
-        width: 690px;
+    #Introducao .card p {
+        font-size: 16px
+    }
+
+    #Introducao .card:first-child {
+        padding: 20px;
+    }
+
+    .felipe_tadeu, .thiago_nascimento {
+        margin: 15px;
+        padding: 0px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    header button svg {
+        width: 45px;
+        height: 45px;
+    }
+
+    #Introducao .card img {
+        width: 110px;
+    }
+
+    #Introducao .card h2 {
+        font-size: 22px
+    }
+
+    #Introducao .card p {
+        font-size: 15px;
+    }
+
+    #Introducao .descricao_criadores p {
+        text-align: left;
+    }
+
+    #Introducao .card:first-child {
+        padding: 20px;
+    }
+
+    .felipe_tadeu, .thiago_nascimento {
+        margin: 10px;
+        padding: 0px;
+    }
+
+    .conteudo_portfolio{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .conteudo_portfolio button {
+        height: 150px;
+        width: 100%;
+
+        box-shadow: unset;
+        border-radius: 0px;
+    }
+
+    #contato form h2 {
+        margin-bottom: 40px;
+        margin-top: 40px;
+
+        font-size: 40px;
+    }
+
+    #contato .campo{
+        margin-bottom: 30px;
+    }
+
+    #contato .campo-textarea {
+        margin-bottom: 60px;
+    }
+
+    .campo input{
+        height: 50px;
+
+        border-radius: 10px;
+
+        font-size: 20px;
+    }
+
+    .campo-textarea textarea {
+        border-radius: 10px;
+
+        font-size: 20px
     }
 }
