@@ -524,8 +524,8 @@ footer h2 {
     color: #007fd4;
 }
 
-@media screen and (max-width: 1370px){
-    .conteudo_banner{
+@media screen and (max-width: 1370px) {
+    .conteudo_banner {
         gap: 40px;
     }
 
@@ -539,8 +539,8 @@ footer h2 {
 
 }
 
-@media screen and (max-width: 1340px){
-    .conteudo_banner{
+@media screen and (max-width: 1340px) {
+    .conteudo_banner {
         gap: 40px;
     }
 }
@@ -627,7 +627,8 @@ footer h2 {
         font-size: 20px
     }
 
-    .felipe_tadeu, .thiago_nascimento {
+    .felipe_tadeu,
+    .thiago_nascimento {
         max-width: 400px;
     }
 }
@@ -703,7 +704,7 @@ footer h2 {
 }
 
 @media screen and (max-width: 900px) {
-    #contato form{
+    #contato form {
         width: 90%;
     }
 
@@ -717,7 +718,7 @@ footer h2 {
         width: 100%;
     }
 
-    .conteudo_portfolio{
+    .conteudo_portfolio {
         width: 100%;
 
         border-radius: 0px;
@@ -726,7 +727,7 @@ footer h2 {
 }
 
 @media screen and (max-width: 755px) {
-    .conteudo_banner{
+    .conteudo_banner {
         gap: 20px;
     }
 
@@ -747,7 +748,7 @@ footer h2 {
         height: 100px;
     }
 
-    header div.container_grid{
+    header div.container_grid {
         width: 100%;
         margin-left: 40px;
         margin-right: 40px;
@@ -816,7 +817,7 @@ footer h2 {
     }
 }
 
-@media screen and (max-width: 500px ) {
+@media screen and (max-width: 500px) {
     header button svg {
         height: 50px;
         width: 50px;
@@ -848,7 +849,7 @@ footer h2 {
     #Introducao .descricao_criadores h2 {
         margin-bottom: 20px;
     }
-    
+
     #Introducao .card p {
         font-size: 15px;
     }
@@ -902,7 +903,8 @@ footer h2 {
         padding: 20px;
     }
 
-    .felipe_tadeu, .thiago_nascimento {
+    .felipe_tadeu,
+    .thiago_nascimento {
         margin: 15px;
         padding: 0px;
     }
@@ -934,12 +936,13 @@ footer h2 {
         padding: 20px;
     }
 
-    .felipe_tadeu, .thiago_nascimento {
+    .felipe_tadeu,
+    .thiago_nascimento {
         margin: 10px;
         padding: 0px;
     }
 
-    .conteudo_portfolio{
+    .conteudo_portfolio {
         padding-left: 0px;
         padding-right: 0px;
     }
@@ -959,7 +962,7 @@ footer h2 {
         font-size: 40px;
     }
 
-    #contato .campo{
+    #contato .campo {
         margin-bottom: 30px;
     }
 
@@ -967,7 +970,7 @@ footer h2 {
         margin-bottom: 60px;
     }
 
-    .campo input{
+    .campo input {
         height: 50px;
 
         border-radius: 10px;
