@@ -524,6 +524,14 @@ footer h2 {
     color: #007fd4;
 }
 
+.menu-fechado {
+    display: none;
+}
+
+#icone-barras {
+    display: none;
+}
+
 @media screen and (max-width: 1370px) {
     .conteudo_banner {
         gap: 40px;
@@ -664,7 +672,21 @@ footer h2 {
     }
 
     nav.menu {
-        display: none;
+        height: 400px;
+        width: 100%;
+
+        padding: 0px 30px;
+
+        flex-direction: column;
+        justify-content: space-around;
+
+        background-color: var(--footer_header);
+
+        position: absolute;
+        top: 90px;
+        right: 0px;
+
+        z-index: 1;
     }
 
     .cases_cards .case {

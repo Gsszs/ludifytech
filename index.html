@@ -3,6 +3,8 @@
 
 <head>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LudifyTech</title>
@@ -19,12 +21,11 @@
     <div class="banner">
         <header>
             <div class="container_grid">
-                <button><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="24" height="24" rx="5" fill="#2E3653" />
-                        <path d="M5 6H19" stroke="#3453D8" stroke-width="3" stroke-linecap="round" />
-                        <path d="M5 12H19" stroke="#3453D8" stroke-width="3" stroke-linecap="round" />
-                        <path d="M5 18H19" stroke="#3453D8" stroke-width="3" stroke-linecap="round" />
-                    </svg></button>
+                <button onclick="OpenCloseMenu()">
+                    <svg id="icone-barras" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="5" fill="#2E3653" /><path d="M5 6H19" stroke="#3453D8" stroke-width="3" stroke-linecap="round" /><path d="M5 12H19" stroke="#3453D8" stroke-width="3" stroke-linecap="round" /><path d="M5 18H19" stroke="#3453D8" stroke-width="3" stroke-linecap="round" /></svg>
+                    <svg id="icone-x" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.35352 2.64648L20.0312 20.3242" stroke="#2E3653" stroke-width="4" stroke-linecap="round"/><path d="M19.6777 2.64648L2.00006 20.3242" stroke="#2E3653" stroke-width="4" stroke-linecap="round"/></svg>                        
+                </button>
+
                 <svg width="226" height="98" viewBox="0 0 226 98" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M0 53.0496V60.0375C0 74.5731 5.98806 87.6919 15.6014 97H36.3577V62.4303H20.8472V53.0496H0ZM224.537 60.0375V53.0496H199.218V97H208.936C218.549 87.6919 224.537 74.5731 224.537 60.0375ZM79.0117 97H45.664V62.4303H61.1746V53.0496H77.8312C74.6944 53.3057 71.9754 54.5993 69.6743 56.9305C67.1099 59.5285 65.8277 62.6712 65.8277 66.3586C65.8277 69.669 66.8721 72.5498 68.9608 75.0011C66.8721 77.4524 65.8277 80.3332 65.8277 83.6435C65.8277 87.3309 67.1099 90.4841 69.6743 93.103C72.2594 95.701 75.3719 97 79.0117 97ZM106.155 62.4303V53.0496H129.558C124.599 53.3864 120.313 55.5181 116.702 59.4447C112.773 63.7397 110.808 68.9252 110.808 75.0011C110.808 81.077 112.773 86.2624 116.702 90.5575C120.652 94.8525 125.409 97 130.972 97H106.155V87.5719H79.0117C77.9363 87.5719 77.016 87.1948 76.2508 86.4405C75.5063 85.6653 75.134 84.733 75.134 83.6435C75.134 82.554 75.5063 81.6322 76.2508 80.8779C77.016 80.1027 77.9363 79.7151 79.0117 79.7151H106.155V70.287H79.0117C77.9363 70.287 77.016 69.9099 76.2508 69.1556C75.5063 68.3804 75.134 67.4481 75.134 66.3586C75.134 65.2692 75.5063 64.3473 76.2508 63.5931C77.016 62.8179 77.9363 62.4303 79.0117 62.4303H106.155ZM151.136 62.4303V53.0496H155.789V97H151.136V87.5719H130.972C127.973 87.5719 125.409 86.3462 123.279 83.8949C121.169 81.4436 120.115 78.479 120.115 75.0011C120.115 71.5231 121.169 68.5585 123.279 66.1072C125.409 63.6559 127.973 62.4303 130.972 62.4303H151.136ZM165.095 70.287V53.0496H189.912V70.287H165.095ZM189.912 79.7151V97H165.095V79.7151H189.912Z"
@@ -50,7 +51,7 @@
                         d="M222.333 91.3333C221.473 90.5454 220.167 90.6021 219.373 91.4618C218.579 92.3215 218.579 93.6785 219.373 94.5382C220.167 95.3979 221.473 95.4545 222.333 94.6667"
                         stroke="white" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
-                <nav class="menu">
+                <nav id="menu" class="menu">
                     <a href="#cases">CASES</a>
                     <a href="#portfolio">PORTFÓLIO</a>
                     <a href="#contato">CONTATE-NOS</a>
