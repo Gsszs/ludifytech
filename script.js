@@ -28,7 +28,7 @@ const solicitarOrcamento = (event) => {
     let dadosForm = {
         nome: valorNome,
         email: valorEmail,
-        descricao: valorTexto
+        texto: valorTexto
     }
 
     fetch("http://127.0.0.1:3000/solicitacoes", {
