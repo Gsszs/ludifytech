@@ -708,7 +708,7 @@ footer h2 {
         box-shadow: none;
     }
 
-    .cases_cards .case p {
+    .invisible-text {
         display: none;
     }
 
