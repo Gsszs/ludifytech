@@ -164,19 +164,19 @@
     </section>
 
     <section id="contato">
-        <form>
+        <form onsubmit="solicitarOrcamento(event)">
             <h2>Contate-nos</h2>
             <div class="campo">
                 <label for="campo-nome">Digite seu nome no campo abaixo.</label>
-                <input id="campo-nome" type="text" placeholder="Digite seu nome...">
+                <input required id="campo-nome" type="text" placeholder="Digite seu nome...">
             </div>
             <div class="campo">
                 <label for="campo-email">Coloque o e-mail para contato.</label>
-                <input id="campo-email" type="email" name="" id="" placeholder="Digite seu e-mail...">
+                <input required id="campo-email" type="email" name="" id="" placeholder="Digite seu e-mail...">
             </div>
             <div class="campo-textarea">
                 <label for="campo-texto">Diga agora sobre o seu problema e sobre sua empresa no campo abaixo.</label>
-                <textarea name="" id="campo-texto" cols="30" rows="15"
+                <textarea required name="" id="campo-texto" cols="30" rows="15"
                     placeholder="Descreva sua empresa e o problema que ela enfrenta..."></textarea>
             </div>
             <button type="submit">Enviar</button>
