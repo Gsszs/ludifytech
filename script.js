@@ -1,6 +1,7 @@
 let menu = document.getElementById("menu")
 let iconeBarras = document.getElementById("icone-barras")
 let iconeX = document.getElementById("icone-x")
+let cases = document.querySelectorAll("#cases .cases_cards .case");
 
 function OpenCloseMenu() {
     if (menu.classList.contains("menu-fechado")) {
@@ -14,10 +15,16 @@ function OpenCloseMenu() {
     }
 }
 
+window.onload = () => {
+    setClick()
+}
+
 window.onresize = () => {
     menu.classList.remove("menu-fechado")
     iconeX.style.display = "inline"
     iconeBarras.style.display = "none"
+
+    setClick()
 }
 
 const solicitarOrcamento = (event) => {
@@ -38,44 +45,51 @@ const solicitarOrcamento = (event) => {
         },
         body: JSON.stringify(dadosForm)
     })
-    .then(resposta => {
-        console.log(resposta)
-        document.querySelector("#contato form").reset()
+        .then(resposta => {
+            console.log(resposta)
+            document.querySelector("#contato form").reset()
 
-        alert("Solicitação cadastrada")
-    })
-    .catch(erro => {
-        console.error(erro)
-        alert("Erro na requisição")
-    })
+            alert("Solicitação cadastrada")
+        })
+        .catch(erro => {
+            console.error(erro)
+            alert("Erro na requisição")
+        })
 
     event.preventDefault()
 }
 
-// let cases = document.querySelectorAll("#cases .cases_card .card");
-// let textos = document.querySelectorAll("#cases .cases_card .card p");
+const abrirCase = (event) => {
+    let paragraphs = event.currentTarget.querySelectorAll("p")
+    paragraphs.forEach(paragraph => {
+        if (paragraph.classList.contains("invisible-text")) {
+            paragraph.classList.remove("invisible-text")
+        } else {
+            paragraph.classList.add("invisible-text")
+        }
+    })
+}
 
-
-// const adicionarClique = () => {
-//     if (window.innerWidth <= 1150) {
-//         cases.addEventListener("click", abrirCase);
-//         textos.addEventListener("click", abrirCase);
-//     }
-//     else {
-//         cases.removeEventListener("click", abrirCase);
-//         textos.removeEventListener("click", abrirCase);
-
-//     }
-// }
-
-// const abrirCase = () => {
-//     if (textos.classList.contains("invisible-text")) {
-//         textos.classList.add("invisible-text");
-//     }
-//     else{
-//         textos.classList.remove("invisible-text");
-//     }
-// }
-
-// adicionarClique()
-// window.addEventListener('resize', checkWidthAndBindClick);
+const setClick = () => {
+    if (window.innerWidth <= 1150) {
+        cases.forEach((element) => {
+            element.addEventListener("click", abrirCase)
+            let paragraphs = element.querySelectorAll("p")
+            paragraphs.forEach(paragraph => {
+                if (!paragraph.classList.contains("invisible-text")) {
+                    paragraph.classList.add("invisible-text")
+                }
+            })
+        })
+    } else {
+        cases.forEach((element) => {
+            element.removeEventListener("click", abrirCase)
+            let paragraphs = element.querySelectorAll("p")
+            paragraphs.forEach(paragraph => {
+                if (paragraph.classList.contains("invisible-text")) {
+                    paragraph.classList.remove("invisible-text")
+                }
+            })
+        })
+    }
+}

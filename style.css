@@ -532,6 +532,10 @@ footer h2 {
     display: none;
 }
 
+.invisible-text {
+    display: none;
+}
+
 @media screen and (max-width: 1370px) {
     .conteudo_banner {
         gap: 40px;
@@ -708,10 +712,6 @@ footer h2 {
         box-shadow: none;
     }
 
-    .invisible-text {
-        display: none;
-    }
-
     .cases_cards {
         display: flex;
         flex-direction: column;
@@ -722,6 +722,17 @@ footer h2 {
         width: 200px;
 
         margin-top: 20px;
+    }
+
+    .cases_cards .case {
+        background-color: rgba(15, 15, 17, 0.7);
+        border-radius: 30px;
+
+        width: fit-content;
+
+        backdrop-filter: blur(8px);
+
+        box-shadow: 0px 0px 15px 7px rgba(59, 68, 104, 0.3);
     }
 }
 
